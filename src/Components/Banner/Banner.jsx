@@ -1,29 +1,30 @@
 import { useEffect } from "react"
 import Glide from "@glidejs/glide"
 import img from '../../assets/Image/home.png'
-// import img1 from '../../assets/Image/home1.png';
+import img1 from '../../assets/Image/home1.png';
 import { Link } from "react-router-dom";
+import './Banner.css';
 const Banner = () => {
 
 
     const sliderImg = <>
         <li className="bg-gradient-to-r from-slate-900 to-slate-700 grid grid-cols-1 lg:grid-cols-2 items-center h-[45rem]">
-            <div className=" text-center lg:text-left lg:ml-80">
+            <div className="text-center lg:text-left lg:ml-80 fade-in px-5 lg:px-0">
                 <h1 className="text-yellow-800 text-2xl">Let&apos;s be smarter</h1><br />
-                <h1 className="text-7xl font-bold  text-white">Enjoy your Daily life Smart way....</h1><br />
-                <p className=" text-xl text-white">Smartwatches provide quick access to notifications, calls, messages, and apps right on your wrist, reducing the constantly check your phone.
-                    Pre-Order View More</p><br />
-                <div>
-                    <Link to='' className="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
-                        <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
-                        <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
-                        <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
-                        <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
-                        <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
-                        <span className="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Pre-Order</span>
+                <h1 className="text-3xl lg:text-7xl font-bold text-white">Enjoy your Daily life Smart way....</h1><br />
+                <p className="lg:text-xl text-white md:mx-40 lg:mx-0">
+                    Smartwatches provide quick access to notifications, calls, messages, and apps right on your wrist, reducing the constantly check your phone.
+                    Pre-Order View More
+                </p><br />
+                <div className="flex justify-center lg:justify-normal gap-5">
+                    <Link to='' className="button relative inline-flex items-center px-12 py-3 overflow-hidden text-sm lg:text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
+                        <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                        <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span className="relative">Pre-Order</span>
                     </Link>
-                   
-                    <Link to='' className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
+                    <Link to='' className="button relative inline-flex items-center px-12 py-3 overflow-hidden text-sm lg:text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
                         <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
                         <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -35,22 +36,45 @@ const Banner = () => {
             <div>
                 <img
                     src={img}
-                    className="lg:h-[36rem] mt-20  lg:mt-36 -ml-12 lg:-ml-64 m-auto"
+                    className="lg:h-[36rem] mt-20 lg:mt-36 -ml-12 lg:-ml-64 m-auto slide-in"
                 />
             </div>
         </li>
-        {/* <li className="bg-gradient-to-r from-slate-900 to-slate-700 grid grid-cols-2">
-            <div>
-                <h1 className="text-4xl font-bold text-center text-white">Welcome to our website</h1>
-                <p className="text-center text-white">We provide the best quality product</p>
+        {/* <li className="bg-gradient-to-r from-slate-900 to-slate-700 grid grid-cols-1 lg:grid-cols-2 items-center h-[45rem]">
+            <div className="text-center lg:text-left lg:ml-80 fade-in px-5 lg:px-0">
+                <h1 className="text-yellow-800 text-2xl">Let&apos;s be smarter</h1><br />
+                <h1 className="text-3xl lg:text-7xl font-bold text-white">Enjoy your Daily life Smart way....</h1><br />
+                <p className="lg:text-xl text-white md:mx-40 lg:mx-0">
+                    Smartwatches provide quick access to notifications, calls, messages, and apps right on your wrist, reducing the constantly check your phone.
+                    Pre-Order View More
+                </p><br />
+                <div className="flex justify-center lg:justify-normal gap-5">
+                    <Link to='' className="button relative inline-flex items-center px-12 py-3 overflow-hidden text-sm lg:text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
+                        <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                        <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span className="relative">Pre-Order</span>
+                    </Link>
+                    <Link to='' className="button relative inline-flex items-center px-12 py-3 overflow-hidden text-sm lg:text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
+                        <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                        <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span className="relative">View More</span>
+                    </Link>
+                </div>
             </div>
             <div>
                 <img
                     src={img1}
-                    className=" m-auto"
+                    className="lg:h-[36rem] mb-20  m-auto slide-in"
                 />
             </div>
         </li> */}
+
+      
+
 
     </>
 
@@ -153,20 +177,7 @@ const Banner = () => {
                 >
                     <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
                 </button>
-                <button
-                    className="p-4 group"
-                    data-glide-dir="=2"
-                    aria-label="goto slide 3"
-                >
-                    <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
-                </button>
-                <button
-                    className="p-4 group"
-                    data-glide-dir="=3"
-                    aria-label="goto slide 4"
-                >
-                    <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
-                </button>
+
             </div>
         </div>
     );
