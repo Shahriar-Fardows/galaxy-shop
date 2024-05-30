@@ -4,9 +4,9 @@ import Header from "./Components/Navbar/Header";
 
 const Root = () => {
     return (
-        <div>
-            <Header/>
-            <div className=" min-h-screen mx-auto  bg-white z-50 py-2">
+        <div className="relative">
+            <Header />
+            <div className=" min-h-screen mx-auto  bg-white z-50 py-[5rem]">
                 <Outlet/>
             </div>
            <div className="z-10">
