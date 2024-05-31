@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Card = () => {
     return (
-        <div className="grid  lg:grid-cols-3 ">
+        <div className="grid  lg:grid-cols-3 lg:container lg:mx-auto gap-5 ">
             
             <div className="overflow-hidden  bg-[#1E1F1C] text-slate-500 shadow-md shadow-slate-200">
                 {/*  <!-- Image --> */}

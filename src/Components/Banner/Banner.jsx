@@ -40,7 +40,7 @@ const Banner = () => {
                 />
             </div>
         </li>
-        {/* <li className="bg-gradient-to-r from-slate-900 to-slate-700 grid grid-cols-1 lg:grid-cols-2 items-center h-[45rem]">
+        <li className="bg-gradient-to-r from-slate-900 to-slate-700 grid grid-cols-1 lg:grid-cols-2 items-center h-[45rem]">
             <div className="text-center lg:text-left lg:ml-80 fade-in px-5 lg:px-0">
                 <h1 className="text-yellow-800 text-2xl">Let&apos;s be smarter</h1><br />
                 <h1 className="text-3xl lg:text-7xl font-bold text-white">Enjoy your Daily life Smart way....</h1><br />
@@ -71,7 +71,7 @@ const Banner = () => {
                     className="lg:h-[36rem] mb-20  m-auto slide-in"
                 />
             </div>
-        </li> */}
+        </li>
 
       
 
